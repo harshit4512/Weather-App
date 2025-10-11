@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         // display
         console.log(weatherdata);
         const {name,main,weather,dt,timezone} =weatherdata;
-        const localedate = new Date()
+        const local = new Date()
 
         citynamedisplay.textContent = name
         temperaturedisplay.textContent = `Temperature: ${main.temp}`
         descriptiondisplay.textContent = `Weather:${weather[0].description}`
-        date.textContent = `Date:${localedate.toLocaleDateString()} , Time:${localedate.toLocaleTimeString()}`
+        date.textContent = `Date:${local.toLocaleDateString()} , Time:${local.toLocaleTimeString()}`
         //unlock the display
          
          weatherinfo.classList.remove('hidden')
